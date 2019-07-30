@@ -6,23 +6,15 @@ import Player from '../Player';
 function App() {
   return (
     <div className="container">
-      {/*<div className="header">
-        header
-      </div>*/}
-      <div className="content">
-        <div className="content-left">
-          left
-        </div>
-        <div className="content-center">
-          <Player/>
-        </div>
-        <div className="content-right">
-          right
-        </div>
+      <div className="left">
+        专辑
       </div>
-      {/*<div className="footer">
-        footer
-      </div>*/}
+      <div className="center">
+        <Player />
+      </div>
+      <div className="right">
+        单曲/精选集
+      </div>
     </div>
   );
 }
