@@ -6,9 +6,9 @@ import Player from '../Player';
 function App() {
   return (
     <div className="container">
-      <div className="header">
+      {/*<div className="header">
         header
-      </div>
+      </div>*/}
       <div className="content">
         <div className="content-left">
           left
@@ -20,9 +20,9 @@ function App() {
           right
         </div>
       </div>
-      <div className="footer">
+      {/*<div className="footer">
         footer
-      </div>
+      </div>*/}
     </div>
   );
 }

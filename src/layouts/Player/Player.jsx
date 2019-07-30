@@ -56,8 +56,8 @@ function Player() {
           <Button style={smallBtnStyle} type="primary" icon="redo" size="small" title="播放顺序" />
         </Col>
       </Row>
-      <div className={classes.menu}>
-        返回 播放界面 专辑墙 设置
+      <div className={classes.playlist}>
+        播放列表
       </div>
     </div>
   );
