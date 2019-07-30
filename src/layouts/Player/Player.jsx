@@ -1,6 +1,8 @@
 import React from 'react';
 import { Slider, Button, Row, Col } from "antd";
 import classes from './Player.module.css';
+import axios from '../../utils/axios';
+import { getLoginUrl } from "../../api";
 
 const mainBtnStyle = {
   width: '4rem',
@@ -17,6 +19,20 @@ const smallBtnStyle =  {
 };
 
 function Player() {
+  const fetchLogin = () => {
+    axios.get(getLoginUrl('15135197519', 2800599))
+      .then(res => {
+        if (res.statusText === 'OK') {
+          console.log(res.data);
+        } else {
+          throw new Error('登陆失败');
+        }
+      })
+      .catch(e => {
+        console.log(e);
+      })
+  };
+
   return (
     <div className={classes.container}>
       <div className={classes.title}>
@@ -49,6 +65,7 @@ function Player() {
             shape="circle"
             icon="caret-right"
             title="播放/暂停"
+            onClick={fetchLogin}
           />
           <Button style={toggleBtnStyle} type="primary" shape="circle" icon="fast-forward" size="large" title="下一首" />
         </Col>
