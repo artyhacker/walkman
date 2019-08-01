@@ -2,12 +2,13 @@ import React from 'react';
 import './App.css';
 
 import Player from '../Player';
+import Login from '../../components/login';
 
 function App() {
   return (
     <div className="container">
       <div className="left">
-        专辑
+        <Login />
       </div>
       <div className="center">
         <Player />
